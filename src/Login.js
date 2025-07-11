@@ -12,7 +12,7 @@ function App() {
  const handleLogin = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post("http://localhost:5000/api/auth/login", {
+    const res = await axios.post("https://api.render.com/deploy/srv-d1oi0qvfte5s73bchhm0?key=3Jz-o7prxNM/api/auth/login", {
       email,
       password,
     });

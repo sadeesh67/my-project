@@ -11,7 +11,7 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/register", {
+      await axios.post("https://api.render.com/deploy/srv-d1oi0qvfte5s73bchhm0?key=3Jz-o7prxNM/api/auth/register", {
         email,
         password,
       });
