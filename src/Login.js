@@ -12,10 +12,11 @@ function App() {
  const handleLogin = async (e) => {
   e.preventDefault();
   try {
-    const res = await axios.post("https://my-backend.onrender.com/api/auth/login", {
-      email,
-      password,
-    });
+    axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
+  email,
+  password,
+});
+
     alert("Login successful!");
     localStorage.setItem("token", res.data.token);
   } catch (err) {

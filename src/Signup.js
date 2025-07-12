@@ -11,10 +11,10 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://my-backend.onrender.com/api/auth/register", {
-        email,
-        password,
-      });
+      axios.post(`${process.env.REACT_APP_API_URL}/api/auth/login`, {
+  email,
+  password,
+});
       alert("Signup successful!");
       navigate("/");
     } catch (err) {
