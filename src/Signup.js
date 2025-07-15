@@ -11,7 +11,7 @@ function Signup() {
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-  await axios.post("https://my-backend-cze2.onrender.com/api/auth/register", {
+  await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/register`, {
   email,
   password,
 });
